@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/appBarLayout_root_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/appBarLayout_back_imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginLeft="-16dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/appBarLayout_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Court"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.appcompat.widget.Toolbar>

@@ -9,6 +9,7 @@
     </style>
 
     <style name="FullscreenAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="background">@drawable/backgorund</item>
 
     </style>
 

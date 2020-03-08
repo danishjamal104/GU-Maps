@@ -12,14 +12,17 @@
         <activity android:name=".EventsActivity"></activity>
         <activity android:name=".ClubInfoActivity" />
         <activity android:name=".FacultyDeskActivity" />
-        <activity android:name=".FoodCourtActivity" />
-        <activity android:name=".SplashActivity"
+        <activity android:name=".FoodCourtActivity"
             android:theme="@style/FullscreenAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/FullscreenAppTheme">
+
         </activity>
         <activity android:name=".MainActivity"
             android:theme="@style/FullscreenAppTheme">

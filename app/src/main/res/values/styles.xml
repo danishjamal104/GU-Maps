@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FullscreenAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="MainActivityMenuTextTheme" parent="Widget.AppCompat.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#45C0FD</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
 </resources>

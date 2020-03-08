@@ -11,6 +11,8 @@
     <style name="FullscreenAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="background">@drawable/backgorund</item>
 
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+
     </style>
 
     <style name="MainActivityMenuTextTheme" parent="Widget.AppCompat.Button">

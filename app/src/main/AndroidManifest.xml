@@ -11,15 +11,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ExploreActivity"
             android:theme="@style/FullscreenAppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".EventsActivity" />
-        <activity android:name=".ClubInfoActivity" />
-        <activity android:name=".FacultyDeskActivity" />
+        <activity android:name=".EventsActivity"
+            android:theme="@style/FullscreenAppTheme"/>
+        <activity android:name=".ClubInfoActivity"
+            android:theme="@style/FullscreenAppTheme"/>
+        <activity android:name=".FacultyDeskActivity"
+            android:theme="@style/FullscreenAppTheme"/>
         <activity
             android:name=".FoodCourtActivity"
             android:theme="@style/FullscreenAppTheme">
@@ -27,7 +26,13 @@
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/FullscreenAppTheme"></activity>
+            android:theme="@style/FullscreenAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/FullscreenAppTheme"></activity>

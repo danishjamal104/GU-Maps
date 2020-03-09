@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FacultyDeskActivity">
+    tools:context=".FacultyDeskActivity"
+    android:background="@drawable/backgorund">
+
+    <include
+        android:id="@+id/facultyDesk_appBarLayout"
+        layout="@layout/app_bar_layout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

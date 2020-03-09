@@ -22,12 +22,21 @@ public class ExploreActivity extends AppCompatActivity {
 
         ((TextView)(toolBar).findViewById(R.id.appBarLayout_title_textView)).setText("Explore");
 
-        (new Handler()).postDelayed(new Runnable() {
+        (overlay.findViewById(R.id.scanOverlay_imageView)).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                toolBar.setVisibility(View.VISIBLE);
+            public void onClick(View view) {
                 overlay.setVisibility(View.GONE);
+                toolBar.setVisibility(View.VISIBLE);
             }
-        }, 2000);
+        });
+
+        (toolBar.findViewById(R.id.appBarLayout_back_imageButton)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+
     }
 }

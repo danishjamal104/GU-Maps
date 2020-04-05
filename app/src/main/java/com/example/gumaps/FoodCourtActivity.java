@@ -2,11 +2,13 @@ package com.example.gumaps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 public class FoodCourtActivity extends AppCompatActivity {
 
@@ -16,6 +18,7 @@ public class FoodCourtActivity extends AppCompatActivity {
     Button cafeWoodzyButton;
     Button kathiJunctionButton;
 
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +43,23 @@ public class FoodCourtActivity extends AppCompatActivity {
             }
         });
 
+        theAddaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAddaMenu();
+            }
+        });
 
     }
 
     void launchIntent(Class activityClass){
         startActivity(new Intent(FoodCourtActivity.this, activityClass));
+    }
+
+    void showAddaMenu(){
+        dialog = new Dialog(this);
+        dialog.setContentView(R.layout.adda_menu);
+        dialog.getWindow().setLayout(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+        dialog.show();
     }
 }

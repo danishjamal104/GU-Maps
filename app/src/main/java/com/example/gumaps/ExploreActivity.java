@@ -2,15 +2,19 @@ package com.example.gumaps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class ExploreActivity extends AppCompatActivity {
 
     View toolBar;
     View overlay;
+
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,7 @@ public class ExploreActivity extends AppCompatActivity {
             public void onClick(View view) {
                 overlay.setVisibility(View.GONE);
                 toolBar.setVisibility(View.VISIBLE);
+                showMap();
             }
         });
 
@@ -38,5 +43,14 @@ public class ExploreActivity extends AppCompatActivity {
         });
 
 
+
+
+    }
+
+    void showMap(){
+        dialog = new Dialog(this);
+        dialog.setContentView(R.layout.map_layout);
+        dialog.getWindow().setLayout(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        dialog.show();
     }
 }

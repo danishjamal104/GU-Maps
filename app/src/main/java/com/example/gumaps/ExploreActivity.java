@@ -1,13 +1,19 @@
 package com.example.gumaps;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class ExploreActivity extends AppCompatActivity {
 
@@ -32,6 +38,14 @@ public class ExploreActivity extends AppCompatActivity {
                 overlay.setVisibility(View.GONE);
                 toolBar.setVisibility(View.VISIBLE);
                 showMap();
+                /*IntentIntegrator integrator = new IntentIntegrator(ExploreActivity.this);
+                integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+                integrator.setTimeout(20000);
+                integrator.setPrompt("Scan a Qr Code");
+                integrator.setOrientationLocked(true);
+                integrator.setBeepEnabled(false);
+                integrator.setBarcodeImageEnabled(true);
+                integrator.initiateScan();*/
             }
         });
 
@@ -45,6 +59,21 @@ public class ExploreActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if(result != null) {
+            if(result.getContents() == null) {
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
+            } else {
+                showMap();
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     void showMap(){

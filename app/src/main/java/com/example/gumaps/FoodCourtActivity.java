@@ -49,6 +49,18 @@ public class FoodCourtActivity extends AppCompatActivity {
                 showAddaMenu();
             }
         });
+        cafeWoodzyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAddaMenu();
+            }
+        });
+        kathiJunctionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAddaMenu();
+            }
+        });
 
     }
 

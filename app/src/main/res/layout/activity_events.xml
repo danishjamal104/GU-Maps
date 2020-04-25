@@ -7,6 +7,18 @@
     tools:context=".EventsActivity"
     android:background="@drawable/backgorund">
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/events_activity_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp"
+        tools:listitem="@layout/image_item">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
     <include layout="@layout/app_bar_layout"
         android:id="@+id/events_appBarLayout"/>
 
